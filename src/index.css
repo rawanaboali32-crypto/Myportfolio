@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  html{
+     font-family: "Roboto", sans-serif;
+     letter-spacing: 0.1px;
+     scroll-behavior: smooth;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html{box-sizing: border-box;}
+
+  *, *::before,*:after{
+box-sizing: inherit;
+  }
+ :root{
+  --primary:#000;
+  --secondry:rgb(24 24 27);
+  --border: rgba(63, 63, 70, 0.4);
+  --title:rgb(244 ,244, 245);
+  --subtitle:rgb(161,161,170);
+  --bgheader:rgb(39, 39, 42);
+  --blue:rgb(93 ,188 ,252);
+  --iconhover:#d4d4d8;
+ }
+ .light{
+   --primary:rgb(250,250,250);
+     --secondry:rgb(255,255,255);
+       --border: rgba(202, 202, 202, 0.512);
+     --title:rgb(39, 39, 42);
+     --subtitle:rgb(82,82,92);
+     --bgheader:rgb(253, 253, 253);
+     --blue:rgb(0,149,246);
+     --iconhover:#333;
+
+ }
+ body{
+background-color:var(--primary);
+color:#fff ;
+ }
+ .contanier{
+  border: 2px solid var(--border);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--secondry);
+  padding: 0 4.8rem;
+ }
+ .divider{
+  border: 1px solid var(--border);
+  margin: 3rem 0;
+  width: calc(100% + 4.8rem + 4.8rem);
+  margin-left: -4.8rem;
+ }
+ li{
+  list-style: none;
+ }
+a{
+  text-decoration: none;
+  color: initial;
+  transition: 0.2s;
+}
+a:hover{
+  cursor: pointer;
+}
+.flex{
+  display: flex;
+  align-items: center;
+
+}
+.border{
+border: 1px solid red;
+}
+button{
+  all: unset;
+}
+button:hover{
+  cursor: pointer;
+}
+button:active{
+  scale:0.9;
+}
+button:disabled{
+  cursor: not-allowed;
+  opacity: 0.4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar{
+width: 0.8rem;
+}
+@media(max-width:1000px){
+.contanier{
+  width: 90%;
+  padding: 0 1.7rem;
+
+}
+ .divider{
+  width: calc(100% + 1.7rem + 1.7rem);
+  margin-left: -1.7rem;
+ }
+}
+@media(max-width:600px){
+.contanier{
+  width: 98%;
+  padding: 0 1.7rem;
+}
+ .divider{
+
+    width: calc(100% + 1.7rem + 1.7rem);
+  margin-left: -1.7rem;
+ }
 }
